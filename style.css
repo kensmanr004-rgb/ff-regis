@@ -116,27 +116,29 @@ h1, h2, h3, .btn-neon, .player-number {
     color: #fff;
 }
 
-/* --- Info Section --- */
+/* --- Info Section (ปรับจูนสำหรับแสดงกฎใบเดียว) --- */
 .info-section {
     padding: 80px 0;
     background: linear-gradient(to bottom, var(--bg-dark), #0f1014);
 }
 
-.info-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+.rules-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .info-card {
     background: var(--bg-card);
-    padding: 30px;
+    padding: 40px;
     border-radius: 8px;
     border: 1px solid var(--border-color);
     text-align: center;
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    max-width: 650px; /* จำกัดความกว้างไม่ให้ยืดกว้างเกินไป */
+    width: 100%;
 }
 
 .info-card::before {
@@ -150,7 +152,7 @@ h1, h2, h3, .btn-neon, .player-number {
 }
 
 .info-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     border-color: #3a3e4a;
 }
@@ -160,19 +162,22 @@ h1, h2, h3, .btn-neon, .player-number {
 }
 
 .card-icon {
-    font-size: 3rem;
+    font-size: 3.5rem;
     margin-bottom: 15px;
 }
 
 .info-card h3 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
+    font-size: 2rem;
+    margin-bottom: 15px;
     color: #fff;
+    letter-spacing: 1px;
 }
 
 .info-card p {
     color: var(--text-muted);
-    font-size: 0.95rem;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    text-align: left; /* เปลี่ยนเนื้อหากฎให้อ่านง่ายขึ้นเมื่อจัดชิดซ้าย */
 }
 
 /* --- Form Section --- */
@@ -233,7 +238,6 @@ h1, h2, h3, .btn-neon, .player-number {
 
 .player-row {
     display: grid;
-    /* แบ่งคอลัมน์: ลำดับ(60px) ชื่อจริง(2fr) ชื่อในเกม(2fr) ห้อง(1fr) */
     grid-template-columns: 60px 2fr 2fr 1.2fr;
     gap: 15px;
     align-items: center;
