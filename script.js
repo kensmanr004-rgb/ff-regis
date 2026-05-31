@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- 2. การเชื่อมโยงข้อมูลกับฐานข้อมูล Google Sheets ---
     // ⚠️ สำคัญมาก: คัดลอก "URL ของเว็บแอป" ที่ได้จากการ Deploy มาวางในเครื่องหมายคำพูดด้านล่างนี้
-    const scriptURL = 'วาง_URL_เว็บแอปของ_GOOGLE_APPS_SCRIPT_ที่นี่'; 
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyJQJuPBPTHQ95-IdX6hXM-57HPRdlIAlvk9CM49Fud6oyIU3DZ9N6-9Z2zMDrW42V_aw/exec'; 
     
     const registrationForm = document.getElementById('registrationForm');
     const successMessage = document.getElementById('successMessage');
