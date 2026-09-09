@@ -4,7 +4,7 @@
    ══════════════════════════════════════════════════════════ */
 
 var GAS_URL      = "https://script.google.com/macros/s/AKfycbyPHYheghgR9MoXmaljrkxR9Qwf1f-6lUs6uM2mSEDPEVraZyQQiVCp1DIMsnHEJ6vmDA/exec";
-var GROUP_LINK   = "https://line.me/ti/g/642AHg2T5x";   /* ← แก้เป็นกลุ่มไลน์ของ FF */
+var GROUP_LINK   = "https://line.me/ti/g/gKGyhLzEq5";   /* ← แก้เป็นกลุ่มไลน์ของ FF */
 var PLAYER_COUNT = 4;                                   /* ← FF ทีมละ 4 คน */
 var GAME_NAME    = "Free Fire";
 
