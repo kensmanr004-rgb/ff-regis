@@ -1,199 +1,99 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Free Fire Competition | พอร์ทัลลงทะเบียน</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;700&family=Rajdhani:wght@600;700&family=Teko:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <meta name="google-site-verification" content="_dafbO5Qo4VDyPuMzRIl9qj29m9X1qC4giSNgd_4eeA" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Fire Tournament | ลงทะเบียนทีม</title>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="hero" id="hero">
-        <div class="overlay"></div>
-        <div class="hero-content">
-            <h2 class="subtitle">Assemble Your Squad</h2>
-            <h1 class="title glow-text">Free Fire Competition<br>Registration</h1>
-            <p class="description">เปิดสมรภูมิเดือดเพื่อเกียรติยศ ประกาศศักดาบนแผนที่ และพิสูจน์ว่าทีมของคุณคือที่หนึ่ง การแข่งขันสุดยอด Battle Royale กำลังรอคุณอยู่!</p>
-            <a href="#register" class="btn-neon scroll-btn">ลงทะเบียนทีมของคุณตอนนี้</a>
-        </div>
+<div class="shell">
+
+  <!-- ══════ ฝั่งซ้าย : ภาพปก ══════ -->
+  <aside class="hero">
+    <img src="ff-hero.jpg" alt="Free Fire" onerror="this.style.display='none'">
+    <div class="hero-overlay"></div>
+    <div class="hero-txt">
+      <span class="badge">BATTLE ROYALE · 4V4</span>
+      <h1>FREE FIRE<br>TOURNAMENT</h1>
+      <p>สมัครทีมของคุณ แล้วไปคว้า Booyah! ด้วยกัน</p>
+    </div>
+  </aside>
+
+  <!-- ══════ ฝั่งขวา : ฟอร์ม ══════ -->
+  <main class="form-side">
+
+    <header class="top">
+      <div>
+        <h2>REGISTRATION</h2>
+        <p class="sub">กรอกข้อมูลให้ครบทุกช่อง แล้วกดส่งข้อมูลด้านล่าง</p>
+      </div>
+      <span class="status">เปิดรับสมัคร</span>
     </header>
 
-    <section class="info-section" id="info">
-        <div class="container">
-            <h2 class="section-title">Tournament <span>Rules</span></h2>
-            <div class="rules-container">
-                <div class="info-card">
-                    <div class="card-icon">⚠️</div>
-                    <h3>กฎการแข่งขันที่ต้องปฏิบัติตาม</h3>
-                    <p>ห้ามใช้โปรแกรมจำลอง (Emulator) บนคอมพิวเตอร์ในการเข้าแข่งขันโดยเด็ดขาด ผู้เล่นทุกคนต้องใช้โทรศัพท์มือถือ/แท็บเล็ตเท่านั้น หากตรวจพบการใช้โปรแกรมโกง หรือพฤติกรรมที่ไม่เหมาะสมระหว่างการแข่งขัน จะถูกตัดสิทธิ์และแบนทีมออกจากการแข่งขันทันที</p>
-                </div>
-            </div>
+    <form id="form" novalidate>
+
+      <!-- 01 ข้อมูลทีม -->
+      <section class="sec">
+        <div class="sec-head"><span class="num">01</span><h3>ข้อมูลทีม</h3></div>
+        <div class="card">
+          <div class="grid">
+            <div><label>ชื่อทีม</label>
+              <input name="team_name" type="text" placeholder="ชื่อทีม" autocomplete="off"></div>
+            <div><label>หัวหน้าทีม</label>
+              <input name="team_leader" type="text" placeholder="ชื่อ-นามสกุล" autocomplete="off"></div>
+            <div><label>เบอร์ติดต่อหัวหน้าทีม</label>
+              <input name="team_contact" type="text" inputmode="tel" placeholder="08xxxxxxxx" autocomplete="off"></div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <section class="register-section" id="register">
-        <div class="container">
-            <h2 class="section-title">Squad <span>Registration</span></h2>
-            
-            <div id="successMessage" class="success-message">
-                <h3>ลงทะเบียนสำเร็จ!</h3>
-                <p>ข้อมูลทีมของคุณถูกบันทึกแล้ว เตรียมตัวเข้าสู่สมรภูมิได้เลย</p>
-            </div>
+      <!-- 02 ผู้เล่นหลัก -->
+      <section class="sec">
+        <div class="sec-head"><span class="num">02</span><h3>รายชื่อผู้เล่นหลัก</h3></div>
+        <p class="hint">กรอกข้อมูลผู้เล่นให้ครบทั้ง 4 คน</p>
+        <div id="mainList"></div>
+      </section>
 
-            <form id="registrationForm" class="cyber-form">
-                
-                <div class="form-group-section">
-                    <h3 class="group-title">1. ข้อมูลทีมและหัวหน้าทีม (Team Details & Leader)</h3>
-                    <div class="form-row double-fields">
-                        <div class="input-group">
-                            <label for="teamName">ชื่อทีม <span class="required">*</span></label>
-                            <input type="text" id="teamName" name="teamName" required placeholder="กรอกชื่อทีมของคุณ">
-                        </div>
-                        <div class="input-group">
-                            <label for="leaderContact">ช่องทางติดต่อหัวหน้าทีม (เบอร์โทร / Line ID) <span class="required">*</span></label>
-                            <input type="text" id="leaderContact" name="leaderContact" required placeholder="เช่น 098-xxxxxxx หรือ Line: myid">
-                        </div>
-                    </div>
-                    <div class="form-row triple-fields">
-                        <div class="input-group">
-                            <label for="leaderRealName">ชื่อจริง - นามสกุล <span class="required">*</span></label>
-                            <input type="text" id="leaderRealName" name="leaderRealName" required placeholder="นาย/นางสาว ดีเด่น เล่นเกม">
-                        </div>
-                        <div class="input-group">
-                            <label for="leaderNickname">ชื่อในเกม (Nickname) <span class="required">*</span></label>
-                            <input type="text" id="leaderNickname" name="leaderNickname" required placeholder="กรอกชื่อตัวละครในเกม">
-                        </div>
-                        <div class="input-group">
-                            <label for="leaderRoom">ห้อง / ชั้นเรียน <span class="required">*</span></label>
-                            <input type="text" id="leaderRoom" name="leaderRoom" required placeholder="ตัวอย่าง: ม.5/2">
-                        </div>
-                    </div>
-                </div>
+      <!-- 03 ตัวสำรอง -->
+      <section class="sec">
+        <div class="sec-head"><span class="num">03</span><h3>ผู้เล่นตัวสำรอง</h3><span class="tag">ไม่บังคับ</span></div>
+        <p class="hint">ระบุได้ 1 คน หรือเว้นว่างไว้หากไม่มี</p>
+        <div id="subList"></div>
+      </section>
 
-                <div class="form-group-section">
-                    <h3 class="group-title">2. สมาชิกหลัก (Main Roster - จำเป็นต้องระบุ 4 คน)</h3>
-                    
-                    <div class="player-row">
-                        <span class="player-number">P1</span>
-                        <div class="input-group">
-                            <label>ชื่อจริง - นามสกุล <span class="required">*</span></label>
-                            <input type="text" name="p1_real" required placeholder="ชื่อจริงผู้เล่นที่ 1">
-                        </div>
-                        <div class="input-group">
-                            <label>ชื่อในเกม (Nickname) <span class="required">*</span></label>
-                            <input type="text" name="p1_nick" required placeholder="ชื่อในเกม">
-                        </div>
-                        <div class="input-group">
-                            <label>ห้อง <span class="required">*</span></label>
-                            <input type="text" name="p1_room" required placeholder="ม.5/2">
-                        </div>
-                        <div class="input-group">
-                            <label>เบอร์โทร หรือ IG <span class="required">*</span></label>
-                            <input type="text" name="p1_contact" required placeholder="เบอร์ หรือ IG">
-                        </div>
-                    </div>
-                    
-                    <div class="player-row">
-                        <span class="player-number">P2</span>
-                        <div class="input-group">
-                            <label>ชื่อจริง - นามสกุล <span class="required">*</span></label>
-                            <input type="text" name="p2_real" required placeholder="ชื่อจริงผู้เล่นที่ 2">
-                        </div>
-                        <div class="input-group">
-                            <label>ชื่อในเกม (Nickname) <span class="required">*</span></label>
-                            <input type="text" name="p2_nick" required placeholder="ชื่อในเกม">
-                        </div>
-                        <div class="input-group">
-                            <label>ห้อง <span class="required">*</span></label>
-                            <input type="text" name="p2_room" required placeholder="ม.5/2">
-                        </div>
-                        <div class="input-group">
-                            <label>เบอร์โทร หรือ IG <span class="required">*</span></label>
-                            <input type="text" name="p2_contact" required placeholder="เบอร์ หรือ IG">
-                        </div>
-                    </div>
-
-                    <div class="player-row">
-                        <span class="player-number">P3</span>
-                        <div class="input-group">
-                            <label>ชื่อจริง - นามสกุล <span class="required">*</span></label>
-                            <input type="text" name="p3_real" required placeholder="ชื่อจริงผู้เล่นที่ 3">
-                        </div>
-                        <div class="input-group">
-                            <label>ชื่อในเกม (Nickname) <span class="required">*</span></label>
-                            <input type="text" name="p3_nick" required placeholder="ชื่อในเกม">
-                        </div>
-                        <div class="input-group">
-                            <label>ห้อง <span class="required">*</span></label>
-                            <input type="text" name="p3_room" required placeholder="ม.5/2">
-                        </div>
-                        <div class="input-group">
-                            <label>เบอร์โทร หรือ IG <span class="required">*</span></label>
-                            <input type="text" name="p3_contact" required placeholder="เบอร์ หรือ IG">
-                        </div>
-                    </div>
-
-                    <div class="player-row">
-                        <span class="player-number">P4</span>
-                        <div class="input-group">
-                            <label>ชื่อจริง - นามสกุล <span class="required">*</span></label>
-                            <input type="text" name="p4_real" required placeholder="ชื่อจริงผู้เล่นที่ 4">
-                        </div>
-                        <div class="input-group">
-                            <label>ชื่อในเกม (Nickname) <span class="required">*</span></label>
-                            <input type="text" name="p4_nick" required placeholder="ชื่อในเกม">
-                        </div>
-                        <div class="input-group">
-                            <label>ห้อง <span class="required">*</span></label>
-                            <input type="text" name="p4_room" required placeholder="ม.5/2">
-                        </div>
-                        <div class="input-group">
-                            <label>เบอร์โทร หรือ IG <span class="required">*</span></label>
-                            <input type="text" name="p4_contact" required placeholder="เบอร์ หรือ IG">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="form-group-section substitute-section">
-                    <h3 class="group-title">3. ผู้เล่นตัวสำรอง (Substitute - ไม่บังคับ)</h3>
-                    <p class="sub-text">สามารถระบุได้ 1 คน หรือเว้นว่างไว้หากไม่มีตัวสำรอง (ระบบไม่บังคับ)</p>
-                    <div class="player-row">
-                        <span class="player-number sub-badge">SUB</span>
-                        <div class="input-group">
-                            <label>ชื่อจริง - นามสกุล</label>
-                            <input type="text" name="sub_real" placeholder="ชื่อจริงตัวสำรอง">
-                        </div>
-                        <div class="input-group">
-                            <label>ชื่อในเกม (Nickname)</label>
-                            <input type="text" name="sub_nick" placeholder="ชื่อในเกม">
-                        </div>
-                        <div class="input-group">
-                            <label>ห้อง</label>
-                            <input type="text" name="sub_room" placeholder="ม.5/2">
-                        </div>
-                        <div class="input-group">
-                            <label>เบอร์โทร หรือ IG</label>
-                            <input type="text" name="sub_contact" placeholder="เบอร์ หรือ IG">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="form-submit">
-                    <br>
-                    <button type="submit" class="btn-neon submit-btn">ส่งข้อมูลลงทะเบียน</button>
-                </div>
-            </form>
+      <!-- 04 กลุ่มไลน์ -->
+      <section class="sec">
+        <div class="sec-head"><span class="num">04</span><h3>เข้ากลุ่มไลน์การแข่งขัน</h3></div>
+        <p class="hint">ทุกทีมต้องเข้ากลุ่มก่อนวันแข่ง ประกาศสายแข่งจะแจ้งในกลุ่มเท่านั้น</p>
+        <div class="qr">
+          <img id="qrImg" alt="QR กลุ่มไลน์">
+          <a id="qrLink" class="line-btn" href="#" target="_blank" rel="noopener">เปิดลิงก์เข้ากลุ่มไลน์</a>
+          <p class="qr-note">เปิดจากมือถือ กดปุ่มได้เลย ไม่ต้องสแกน</p>
         </div>
-    </section>
+      </section>
 
-    <footer class="footer">
-        <p>&copy; 2026 Free Fire Tournament. สงวนลิขสิทธิ์ตามกฎหมาย (เว็บไซต์นี้ไม่มีความเกี่ยวข้องกับ Garena)</p>
-    </footer>
+      <div id="errBox" class="errbox"></div>
 
-    <script src="script.js"></script>
+      <button type="submit" class="send">ส่งข้อมูลลงทะเบียน</button>
+      <p class="foot">ตรวจสอบข้อมูลให้ถูกต้องก่อนกดส่ง · ส่งได้ทีมละ 1 ครั้ง</p>
+
+    </form>
+  </main>
+</div>
+
+<!-- ══════ กล่องแจ้งสำเร็จ ══════ -->
+<div class="done" id="done">
+  <div class="done-box">
+    <div class="done-icon">🔥</div>
+    <h3>ลงทะเบียนสำเร็จ</h3>
+    <p>ข้อมูลทีมของคุณถูกบันทึกเรียบร้อยแล้ว<br>อย่าลืมเข้ากลุ่มไลน์เพื่อรับข่าวสารการแข่งขัน</p>
+    <button type="button" onclick="window.location.reload()">ปิดหน้าต่าง</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
