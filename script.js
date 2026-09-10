@@ -3,7 +3,7 @@
    ผู้เล่นหลัก 4 คน + ตัวสำรอง 1 คน
    ══════════════════════════════════════════════════════════ */
 
-var GAS_URL      = "https://script.google.com/macros/s/AKfycbyPHYheghgR9MoXmaljrkxR9Qwf1f-6lUs6uM2mSEDPEVraZyQQiVCp1DIMsnHEJ6vmDA/exec";
+var GAS_URL      = "https://script.google.com/macros/s/AKfycbyFV__PuPPvqeEuWtPL4NmgtaCswC1h0B5YpFhZmWEYnMrB6yyKUG2QzO0WDkBI0GGx6g/exec";
 var GROUP_LINK   = "https://line.me/ti/g2/Ci3Mtap8NMTZO_TOYXtbOtUKUxrCcRne1mkbPw?utm_source=invitation&utm_medium=link_copy&utm_campaign=default";   /* ← แก้เป็นกลุ่มไลน์ของ FF */
 var PLAYER_COUNT = 4;                                   /* ← FF ทีมละ 4 คน */
 var GAME_NAME    = "Free Fire";
